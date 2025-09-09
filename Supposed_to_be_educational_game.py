@@ -3,10 +3,10 @@ import random
 
 ques = 0
 luck = 0
-dmg = 0
+dmg = 100
 ppp = ["head", "hair", "left arm", "right arm", "face", "throat", "left foot", "right foot", "groin", "left middle toenail", "left tooth", "right tooth", "upper forehead", "chin", "middle chin", "high chin"]
 yap = ["punch", "kick", "lick", "smell", "graze", "insult", "brag about", "stare at", "think about", "jump on"]
-epic = ["accidentally pooped while trying to attack", "slipped on a random bannana peal while going over to attack", "got snipped by a burgan truck while going over to hit", "staggered over drunk while trying to hit"]
+epic = ["accidentally pooped while trying to attack", "slipped on a random bannana peel while going over to attack", "got snipped by a burgan truck while going over to hit", "staggered over drunk while trying to hit"]
 praygold = 25
 sssspecial = 0
 eee = 250
@@ -14,7 +14,7 @@ questions = ["What is part of the first line of defence?",
               "When a pathogen enters your body, what is one of the first cells to appear?",
                 "Which immune cell is the most careless when attacking?",
                   "What does the thymus do?",
-                    "What are cykotynes?",
+                    "What are cytokines?",
                      "What part of the immune system are T cells part of?",
                       "What do Helper T cells activate?",
                         "What do pyrogens do?",
@@ -38,7 +38,7 @@ answersleft = answers
 display = []
 ara = ["A", "B", "C", "D"]
 replyans = 0
-p = 1
+p = 0
 var = 4
 alive = True
 
@@ -49,7 +49,35 @@ def wait() :
 while alive:
   print("Score: " + str(p))
   print(f"Health: {eee}")
-  action = input("What do you want to do? (casino, work, fight, pray): ")
+  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, bergantruck): ")
+  if action == "bergantruck":
+     print("You hear feint singing far in the distance")
+     wait()
+     print("You can just make out the lyrics that he is singing")
+     wait()
+     print("It sounds like... ASGORE????...")
+     wait()
+     print("Asgore: D.U.I, HOW ABOUT YOU DIE")
+     wait()
+     print("I'LL GO A HUNDRED MILES, IN AN HOUR")
+     print("You got hit by Asgore's bergantruck")
+     wait()
+     alive = False
+     break
+  if action == "end_run":
+      proceed = input("Are you sure you want to continue? (yes/no): ") # gives you as second chance
+      if proceed == "yes":
+        alive = False
+        print("Ending run...")
+        wait()
+      elif proceed == "no":
+          print("Good choice")
+          wait()
+      else:
+         print("That is not an option")
+         wait()
+  if action == "stats":
+     print("luck:", luck)
   if action == "fight":
     if random.randint(1,5) == 1:          # chance to fight special guard
       print("You walk up to the guard... but you feel like something is off...")
@@ -64,19 +92,21 @@ while alive:
         ssspecial = 0
         sssspecial = 0
         ene = random.randint(75,175)
-    elif random.randint(1,100) == 3:
-        print("You caught cancer and begin to try beat Stage 1 Cancer")
+    elif random.randint(1,25) == 3:
+        print("...")
+        wait()
+        print("You begin to try beat Stage 1 Cancer")
         ene = random.randint(9999,99999)       # SpEcIaL guard hp
         ssspecial = random.randint(20, 30)  # special guard damage increase
         print(f"SPECIAL CANCER POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
         sssspecial = round(((ene - 180)/3) + ssspecial)
-    elif random.randint(1,100) == 4:
+    elif random.randint(1,50) == 4:
       alive = False
       print("You died to slipping on a random banana peel... Better luck next time I guess...")
       break
     elif random.randint(1,10) == 5:
       print("An angle comes down and heals you for all your health before the fight!")
-      eee += 250 - eee
+      eee = 250
       wait()
       print("You walk up to the guard and start to fight them.")
     else :
@@ -103,6 +133,7 @@ while alive:
         print(f"They {yap[random.randint(0,len(yap) - 1)]} your {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
         eee -= dmg
       print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+      wait()
     if eee < 0.1 :
       alive = False
     else :
@@ -111,8 +142,10 @@ while alive:
       p += random.randint(2,36) + sssspecial
       print("Score: " + str(p))
   if action == "work":
+    print("To answer the questions, type the number next to the answer that you think is correct.")
+    wait()
     if eee < 250:
-      eee += 100
+      eee += 125
     for i in range(5):
           var = 4
           replyans = random.randint(1,4)
@@ -136,6 +169,7 @@ while alive:
           wait()
   if action == "casino" :
     if p == 0:
+      wait()
       print("You go up to the casino but your too broke to pay the entry fee so the guard shoots you.")
       alive = False
     if alive:
@@ -168,9 +202,12 @@ while alive:
                   p += win
                   if eee < 250:
                     eee += win + 5
+                    wait()
                   print(f"Your points are now at {p}")
+                  wait()
                   if p != 0:
                         print("Don't gamble your life away")
+                        wait()
                         gamble = input("Gamble? (yes/no): ")
   if action == "pray" :
     if p == 0:
@@ -185,6 +222,9 @@ while alive:
           praygold = round(praygold * 1.4)
           if luck < 5 :
             luck += 1
+          if luck == 5 :
+            wait()
+            print("You already have maximum luck")
       else :
           print("You walk away.")
 print("You died")
