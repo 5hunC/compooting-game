@@ -26,7 +26,7 @@ answers = ["1. The skin",
              "2. macrophages",
                "3. Neutrophil",
                  "4. Trains the T cells",
-                   "5. The comunication",
+                   "5. The communication",
                      "6. The adaptive immune system",
                        "7. B cells",
                          "8. They get picked up by the brain and activate fevers",
@@ -49,21 +49,89 @@ def wait() :
 while alive:
   print("Score: " + str(p))
   print(f"Health: {eee}")
-  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, bergantruck): ")
-  if action == "bergantruck":
-     print("You hear feint singing far in the distance")
-     wait()
-     print("You can just make out the lyrics that he is singing")
-     wait()
-     print("It sounds like... ASGORE????...")
-     wait()
-     print("Asgore: D.U.I, HOW ABOUT YOU DIE")
-     wait()
-     print("I'LL GO A HUNDRED MILES, IN AN HOUR")
-     print("You got hit by Asgore's bergantruck")
-     wait()
-     alive = False
-     break
+  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, bergantruck, admin_abuse): ")
+  if action == "FIGHT":
+    print("The great undyne spawns...")
+    ene = random.randint(250,500)       # SpEcIaL guard hp
+    ssspecial = random.randint(20, 30)  # special guard damage increase
+    print(f"SPECIAL GUARD POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
+    sssspecial = round(((ene - 180)/3) + ssspecial)
+    wait()
+    while ene > 0 and eee > 0 :
+      dmg = random.randint(10,40)
+      if random.randint(1,10) == 1 :
+        print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {dmg} instead!")
+        eee -= dmg
+      else :
+        print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
+        ene -= dmg
+      dmg = random.randint(10 + sssspecial, 40 + sssspecial)
+      print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+      if random.randint(1,10 - luck) == 1 :
+        print(f"They {epic[random.randint(0,len(epic) - 1)]} damaging them for {dmg} instead!")
+        ene -= dmg
+      else :
+        print(f"They {yap[random.randint(0,len(yap) - 1)]} your {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
+        eee -= dmg
+      print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+      wait()
+    if eee < 0.1 :
+      alive = False
+    else :
+      print("YOU WON!")
+      print("You stole some cash off their corpse")
+      wait()
+      p += random.randint(2,36) + sssspecial
+  if action == "admin_abuse":
+    print("By the way, there is a 1 in 100 chance to imediatly die due to admin abusing...")
+    wait()
+    print("Getting your admin powers ready...")
+    wait()
+    secondary_action = input("What would you like to use? (Too_much_hp, Too_lucky, Too_many_points): ")
+    print()
+    if secondary_action == "Too_much_hp":
+      print("Loading hp...")
+      if random.randint(1,100) == 6:
+        print("You died to admin abusing")
+        alive = False
+        break
+      wait()
+      eee += 99999999
+      print("added 99999999 to your hp")
+      wait()
+    elif secondary_action == "Too_lucky":
+      if random.randint(1,100) == 7:
+        print("You died to admin abusing")
+        alive = False
+        break
+      luck = 9
+      print("You now have been blessed by the gods with lots of luck")
+      wait()
+    elif secondary_action == "Too_many_points":
+      if random.randint(1,100) == 8:
+        print("You died to admin abusing")
+        alive = False
+        break
+      p += 10000000
+      print("10000000 has been added to Your points")
+      wait()
+    else:
+      print("That's not an option")
+      wait()
+    if action == "bergantruck":
+      print("You hear feint singing far in the distance")
+      wait()
+      print("You can just make out the lyrics that he is singing")
+      wait()
+      print("It sounds like... ASGORE????...")
+      wait()
+      print("Asgore: D.U.I, HOW ABOUT YOU DIE")
+      wait()
+      print("I'LL GO A HUNDRED MILES, IN AN HOUR")
+      print("You got hit by Asgore's bergantruck")
+      wait()
+      alive = False
+      break
   if action == "end_run":
       proceed = input("Are you sure you want to continue? (yes/no): ") # gives you as second chance
       if proceed == "yes":
@@ -102,7 +170,7 @@ while alive:
         sssspecial = round(((ene - 180)/3) + ssspecial)
     elif random.randint(1,50) == 4:
       alive = False
-      print("You died to slipping on a random banana peel... Better luck next time I guess...")
+      print("You died to slipping on a random banana peel while walking up to the guard... Better luck next time I guess...")
       break
     elif random.randint(1,10) == 5:
       print("An angle comes down and heals you for all your health before the fight!")
@@ -139,8 +207,8 @@ while alive:
     else :
       print("YOU WON!")
       print("You stole some cash off their corpse")
+      wait()
       p += random.randint(2,36) + sssspecial
-      print("Score: " + str(p))
   if action == "work":
     print("To answer the questions, type the number next to the answer that you think is correct.")
     wait()
@@ -224,7 +292,7 @@ while alive:
             luck += 1
           if luck == 5 :
             wait()
-            print("You already have maximum luck")
+            print("You have maximum luck")
       else :
           print("You walk away.")
 print("You died")
