@@ -50,6 +50,20 @@ while alive:
   print("Score: " + str(p))
   print(f"Health: {eee}")
   action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, bergantruck, admin_abuse): ")
+  if action == "bergantruck":
+      print("You hear feint singing far in the distance")
+      wait()
+      print("You can just make out the lyrics that he is singing")
+      wait()
+      print("It sounds like... ASGORE????...")
+      wait()
+      print("Asgore: D.U.I, HOW ABOUT YOU DIE")
+      wait()
+      print("I'LL GO A HUNDRED MILES, IN AN HOUR")
+      print("You got hit by Asgore's bergantruck")
+      wait()
+      alive = False
+      break
   if action == "FIGHT":
     print("The great undyne spawns...")
     ene = random.randint(250,500)       # SpEcIaL guard hp
@@ -113,25 +127,13 @@ while alive:
         alive = False
         break
       p += 10000000
+      print("Getting points from the bank...")
+      wait()
       print("10000000 has been added to Your points")
       wait()
     else:
       print("That's not an option")
       wait()
-    if action == "bergantruck":
-      print("You hear feint singing far in the distance")
-      wait()
-      print("You can just make out the lyrics that he is singing")
-      wait()
-      print("It sounds like... ASGORE????...")
-      wait()
-      print("Asgore: D.U.I, HOW ABOUT YOU DIE")
-      wait()
-      print("I'LL GO A HUNDRED MILES, IN AN HOUR")
-      print("You got hit by Asgore's bergantruck")
-      wait()
-      alive = False
-      break
   if action == "end_run":
       proceed = input("Are you sure you want to continue? (yes/no): ") # gives you as second chance
       if proceed == "yes":
