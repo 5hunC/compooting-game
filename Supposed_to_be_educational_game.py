@@ -3,7 +3,7 @@ import random
 
 ques = 0
 luck = 0
-dmg = 100
+dmg = 1
 ppp = ["head", "hair", "left arm", "right arm", "face", "throat", "left foot", "right foot", "groin", "left middle toenail", "left tooth", "right tooth", "upper forehead", "chin", "middle chin", "high chin"]
 yap = ["punch", "kick", "lick", "smell", "graze", "insult", "brag about", "stare at", "think about", "jump on"]
 epic = ["accidentally pooped while trying to attack", "slipped on a random bannana peel while going over to attack", "got snipped by a burgan truck while going over to hit", "staggered over drunk while trying to hit"]
@@ -127,8 +127,6 @@ while alive:
         alive = False
         break
       p += 10000000
-      print("Getting points from the bank...")
-      wait()
       print("10000000 has been added to Your points")
       wait()
     else:
@@ -153,7 +151,7 @@ while alive:
       print("You walk up to the guard... but you feel like something is off...")
       ene = random.randint(180,225)       # SpEcIaL guard hp
       ssspecial = random.randint(20, 30)  # special guard damage increase
-      print(f"SPECIAL GUARD POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
+      print(f"UNDYNE POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
       sssspecial = round(((ene - 180)/3) + ssspecial)
     elif random.randint(1,5) == 2:
         ene = random.randint(75,175)
@@ -162,7 +160,7 @@ while alive:
         ssspecial = 0
         sssspecial = 0
         ene = random.randint(75,175)
-    elif random.randint(1,25) == 3:
+    elif random.randint(1,20) == 3:
         print("...")
         wait()
         print("You begin to try beat Stage 1 Cancer")
@@ -175,8 +173,8 @@ while alive:
       print("You died to slipping on a random banana peel while walking up to the guard... Better luck next time I guess...")
       break
     elif random.randint(1,10) == 5:
-      print("An angle comes down and heals you for all your health before the fight!")
-      eee = 250
+      print("An angle comes down and heals you for 250 hp before the fight!")
+      eee += 250
       wait()
       print("You walk up to the guard and start to fight them.")
     else :
