@@ -129,6 +129,12 @@ while alive:
       p += 10000000
       print("10000000 has been added to Your points")
       wait()
+    elif secondary_action == "cancel":
+      wait()
+      print("Canceling action...")
+      wait()
+      print("Action canceled")
+      wait()
     else:
       print("That's not an option")
       wait()
