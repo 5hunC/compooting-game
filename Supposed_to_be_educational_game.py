@@ -68,7 +68,7 @@ while alive:
     print("The great undyne spawns...")
     ene = random.randint(250,500)       # SpEcIaL guard hp
     ssspecial = random.randint(20, 30)  # special guard damage increase
-    print(f"SPECIAL GUARD POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
+    print(f"UNDYNE POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
     sssspecial = round(((ene - 180)/3) + ssspecial)
     wait()
     while ene > 0 and eee > 0 :
@@ -151,7 +151,7 @@ while alive:
       print("You walk up to the guard... but you feel like something is off...")
       ene = random.randint(180,225)       # SpEcIaL guard hp
       ssspecial = random.randint(20, 30)  # special guard damage increase
-      print(f"UNDYNE POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
+      print(f"SPECIAL GUARD POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
       sssspecial = round(((ene - 180)/3) + ssspecial)
     elif random.randint(1,5) == 2:
         ene = random.randint(75,175)
