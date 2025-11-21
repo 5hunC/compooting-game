@@ -101,7 +101,7 @@ while alive:
     wait()
     print("Getting your admin powers ready...")
     wait()
-    secondary_action = input("What would you like to use? (Too_much_hp, Too_lucky, Too_many_points): ")
+    secondary_action = input("What would you like to use? (Too_much_hp, Too_lucky, Too_many_points, cancel): ")
     print()
     if secondary_action == "Too_much_hp":
       print("Loading hp...")
