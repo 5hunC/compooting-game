@@ -97,7 +97,7 @@ while alive:
       wait()
       p += random.randint(2,36) + sssspecial
   if action == "admin_abuse":
-    print("By the way, there is a 1 in 100 chance to imediatly die due to admin abusing...")
+    print("By the way, there is a 1 in 50 chance to imediatly die due to admin abusing...")
     wait()
     print("Getting your admin powers ready...")
     wait()
@@ -105,7 +105,7 @@ while alive:
     print()
     if secondary_action == "Too_much_hp":
       print("Loading hp...")
-      if random.randint(1,100) == 6:
+      if random.randint(1,50) == 6:
         print("You died to admin abusing")
         alive = False
         break
@@ -114,7 +114,7 @@ while alive:
       print("added 99999999 to your hp")
       wait()
     elif secondary_action == "Too_lucky":
-      if random.randint(1,100) == 7:
+      if random.randint(1,50) == 7:
         print("You died to admin abusing")
         alive = False
         break
@@ -122,7 +122,7 @@ while alive:
       print("You now have been blessed by the gods with lots of luck")
       wait()
     elif secondary_action == "Too_many_points":
-      if random.randint(1,100) == 8:
+      if random.randint(1,50) == 8:
         print("You died to admin abusing")
         alive = False
         break
