@@ -49,7 +49,43 @@ def wait() :
 while alive:
   print("Score: " + str(p))
   print(f"Health: {eee}")
-  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, bergantruck, admin_abuse): ")
+  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, bergantruck, admin_abuse, ERASE): ")
+  if actoin == "ERASE":
+    ERASE = input("Are you sure you want to ERASE this timeline?... (Do it/Don't do it): ")
+    if ERASE == "Do it"
+      print("Chara: You know what we have to do now...")
+      wait()
+      print("Chara: Partner?...")
+      wait()
+      print("Chara: It was fun while it lasted...")
+      wait()
+      print("Chara: HAHAHAHA, AHAHA")
+      wait()
+      print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+      print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+      print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+      alive = False
+      break
+  elif ERASE == "Don't do it":
+    print("Chara: Since when... Were YOU the one in control?...")
+    wait()
+    print("Chara: HAHAHAHA, AHAHA")
+    wait()
+    print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+    print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+    print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+    alive = False
+    break
+  else:
+    print("Chara: You really ARE an IDIOT!")
+    wait()
+    print("Chara: HAHAHAHA, AHAHA")
+    wait()
+    print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+    print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+    print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
+    alive = False
+    break
   if action == "bergantruck":
       print("You hear feint singing far in the distance")
       wait()
