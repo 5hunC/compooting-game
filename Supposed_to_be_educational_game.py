@@ -52,7 +52,7 @@ while alive:
   action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, bergantruck, admin_abuse, ERASE): ")
   if actoin == "ERASE":
     ERASE = input("Are you sure you want to ERASE this timeline?... (Do it/Don't do it): ")
-    if ERASE == "Do it"
+    if ERASE == "Do it":
       print("Chara: You know what we have to do now...")
       wait()
       print("Chara: Partner?...")
