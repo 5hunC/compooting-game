@@ -49,7 +49,7 @@ def wait() :
 while alive:
   print("Score: " + str(p))
   print(f"Health: {eee}")
-  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, bergantruck, admin_abuse, ERASE): ")
+  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, admin_abuse, Reset, ERASE): ")
   if action == "ERASE":
     ERASE = input("Are you sure you want to ERASE this timeline?... (Do it/Don't do it): ")
     if ERASE == "Do it":
@@ -86,20 +86,22 @@ while alive:
       print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
       alive = False
       break
-  if action == "bergantruck":
-      print("You hear feint singing far in the distance")
+  if action == "Reset":
+    Reset = input("Are you sure you want to Reset this timeline? (Do it/Don't do it): ")
+    if Reset == "Do it":
+      print("Chara: There is no turning back now...")
+      p = 0
+      luck = 0
+      eee = 250
       wait()
-      print("You can just make out the lyrics that he is singing")
+      print("You have been reset...")
       wait()
-      print("It sounds like... ASGORE????...")
+    elif Reset == "Don't do it":
+      print("You close the Reset button...")
       wait()
-      print("Asgore: D.U.I, HOW ABOUT YOU DIE")
+    else:
+      print("That's not an option")
       wait()
-      print("I'LL GO A HUNDRED MILES, IN AN HOUR")
-      print("You got hit by Asgore's bergantruck")
-      wait()
-      alive = False
-      break
   if action == "FIGHT":
     print("The great undyne spawns...")
     ene = random.randint(250,500)       # SpEcIaL guard hp
