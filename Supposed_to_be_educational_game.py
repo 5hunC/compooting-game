@@ -76,7 +76,7 @@ while alive:
       print("9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999")
       alive = False
       break
-    elif ERASE == "NO ONE IS GOING TO SURVIVE!":
+    elif ERASE == "ERASE":
       print("Chara: That's more like it!")
       wait()
       print("Both: HAHAHAHA, AHAHA")
