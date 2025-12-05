@@ -120,7 +120,7 @@ while alive:
     sssspecial = round(((ene - 180)/3) + ssspecial)
     wait()
     while ene > 0 and eee > 0 :
-      dmg = random.randint(10,40)
+      dmg = random.randint(10,40 - luck)
       if random.randint(1,10) == 1 :
         print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {dmg} instead!")
         eee -= dmg
@@ -153,7 +153,7 @@ while alive:
     print()
     if secondary_action == "Too_much_hp":
       print("Loading hp...")
-      if random.randint(1,50) == 6:
+      if random.randint(1,50 + luck) == 6:
         print("You died to admin abusing")
         alive = False
         break
@@ -162,7 +162,7 @@ while alive:
       print("added 99999999 to your hp")
       wait()
     elif secondary_action == "Too_lucky":
-      if random.randint(1,50) == 7:
+      if random.randint(1,50 + luck) == 7:
         print("You died to admin abusing")
         alive = False
         break
@@ -170,7 +170,7 @@ while alive:
       print("You now have been blessed by the gods with lots of luck")
       wait()
     elif secondary_action == "Too_many_points":
-      if random.randint(1,50) == 8:
+      if random.randint(1,50 + luck) == 8:
         print("You died to admin abusing")
         alive = False
         break
@@ -214,7 +214,7 @@ while alive:
         ssspecial = 0
         sssspecial = 0
         ene = random.randint(75,175)
-    elif random.randint(1,20) == 3:
+    elif random.randint(1,20 + luck) == 3:
         print("...")
         wait()
         print("You begin to try beat Stage 1 Cancer")
@@ -222,7 +222,7 @@ while alive:
         ssspecial = random.randint(20, 30)  # special guard damage increase
         print(f"SPECIAL CANCER POWER LEVEL: {round(((ene - 180)/3) + ssspecial)}")
         sssspecial = round(((ene - 180)/3) + ssspecial)
-    elif random.randint(1,50) == 4:
+    elif random.randint(1,50 + luck) == 4:
       alive = False
       print("You died to slipping on a random banana peel while walking up to the guard... Better luck next time I guess...")
       break
@@ -239,8 +239,8 @@ while alive:
     ene = random.randint(80,180)
     wait()
     while ene > 0 and eee > 0 :
-      dmg = random.randint(10,40)
-      if random.randint(1,10) == 1 :
+      dmg = random.randint(10,40 - luck)
+      if random.randint(1,10 + luck) == 1 :
         print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {dmg} instead!")
         eee -= dmg
       else :
