@@ -244,31 +244,31 @@ while alive:
       sssspecial = 0
     ene = random.randint(80,180)
     wait()
-    while ene > 0 and eee > 0 :
-      dmg = random.randint(10,40 - luck)
-    if random.randint(1,10) == 1 :
-      print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {yourdmg} instead!")
-      eee -= yourdmg
-    else :
-      print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {yourdmg} damage!")
-      ene -= yourdmg
-      dmg = random.randint(10 + sssspecial, 40 + sssspecial)
-      print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
-    if random.randint(1,10 - luck) == 1 :
-      print(f"They {epic[random.randint(0,len(epic) - 1)]} damaging them for {dmg} instead!")
-      ene -= dmg
-    else :
-      print(f"They {yap[random.randint(0,len(yap) - 1)]} your {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
-      eee -= dmg
-      print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
-      wait()
-    if eee < 0.1 :
-      alive = False
-    else :
-      print("YOU WON!")
-      print("You stole some cash off their corpse")
-      wait()
-      p += random.randint(2,36) + sssspecial
+      while ene > 0 and eee > 0 :
+        dmg = random.randint(10,40 - luck)
+      if random.randint(1,10) == 1 :
+        print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {yourdmg} instead!")
+        eee -= yourdmg
+      else :
+        print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {yourdmg} damage!")
+        ene -= yourdmg
+        dmg = random.randint(10 + sssspecial, 40 + sssspecial)
+        print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+      if random.randint(1,10 - luck) == 1 :
+        print(f"They {epic[random.randint(0,len(epic) - 1)]} damaging them for {dmg} instead!")
+        ene -= dmg
+      else :
+        print(f"They {yap[random.randint(0,len(yap) - 1)]} your {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
+        eee -= dmg
+        print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+        wait()
+      if eee < 0.1 :
+        alive = False
+      else :
+        print("YOU WON!")
+        print("You stole some cash off their corpse")
+        wait()
+        p += random.randint(2,36) + sssspecial
   if action == "work":
     print("To answer the questions, type the number next to the answer that you think is correct.")
     wait()
