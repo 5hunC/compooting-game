@@ -4,6 +4,7 @@ import random
 ques = 0
 luck = 0
 dmg = 1
+yourdmg = 1
 ppp = ["head", "hair", "left arm", "right arm", "face", "throat", "left foot", "right foot", "groin", "left middle toenail", "left tooth", "right tooth", "upper forehead", "chin", "middle chin", "high chin"]
 yap = ["punch", "kick", "lick", "smell", "graze", "insult", "brag about", "stare at", "think about", "jump on"]
 epic = ["accidentally pooped while trying to attack", "slipped on a random bannana peel while going over to attack", "got snipped by a burgan truck while going over to hit", "staggered over drunk while trying to hit"]
@@ -49,7 +50,11 @@ def wait() :
 while alive:
   print("Score: " + str(p))
   print(f"Health: {eee}")
-  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, admin_abuse, Reset, ERASE): ")
+  action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, admin_abuse, Reset, ERASE, SAVE): ")
+  if action == "SAVE":
+    yourdmg += 999999999999999999999999999999999999999999999999999999999999
+    print("You are filled with HATRED")
+    wait()
   if action == "ERASE":
     ERASE = input("Are you sure you want to ERASE this timeline?... (Do it/Don't do it): ")
     if ERASE == "Do it":
@@ -103,6 +108,7 @@ while alive:
       p = 0
       luck = 0
       eee = 250
+      yourdmg = 1
       wait()
       print("You have been reset...")
       wait()
@@ -121,12 +127,13 @@ while alive:
     wait()
     while ene > 0 and eee > 0 :
       dmg = random.randint(10,40 - luck)
+      yourdmg = random.randint(10,40)
       if random.randint(1,10) == 1 :
-        print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {dmg} instead!")
-        eee -= dmg
+        print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {yourdmg} instead!")
+        eee -= yourdmg
       else :
-        print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
-        ene -= dmg
+        print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {yourdmg} damage!")
+        ene -= yourdmg
       dmg = random.randint(10 + sssspecial, 40 + sssspecial)
       print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
       if random.randint(1,10 - luck) == 1 :
@@ -240,12 +247,13 @@ while alive:
     wait()
     while ene > 0 and eee > 0 :
       dmg = random.randint(10,40 - luck)
+      yourdmg = random.randint(10,40)
       if random.randint(1,10 + luck) == 1 :
-        print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {dmg} instead!")
-        eee -= dmg
+        print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {yourdmg} instead!")
+        eee -= yourdmg
       else :
-        print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
-        ene -= dmg
+        print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {yourdmg} damage!")
+        ene -= yourdmg
       dmg = random.randint(10 + sssspecial, 40 + sssspecial)
       print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
       if random.randint(1,10 - luck) == 1 :
