@@ -52,7 +52,7 @@ while alive:
   print(f"Health: {eee}")
   action = input("What do you want to do? (casino, work, fight, pray, stats, end_run, admin_abuse, Reset, ERASE, SAVE): ")
   if action == "SAVE":
-    yourdmg += 999999999999999999999999999999999999999999999999999999999999
+    yourdmg == 999999999999999999999999999999999999999999999999999999999999
     print("You are filled with HATRED")
     wait()
   if action == "ERASE":
@@ -127,30 +127,33 @@ while alive:
     wait()
     while ene > 0 and eee > 0 :
       dmg = random.randint(10,40 - luck)
-      yourdmg = random.randint(10,40)
-      if random.randint(1,10) == 1 :
-        print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {yourdmg} instead!")
-        eee -= yourdmg
+      if yourdmg == 1:
+        yourdmg = random.randint(10,40)
+      else:
+        yourdmg == 999999999999999999999999999999999999999999999999999999999999
+        if random.randint(1,10) == 1 :
+          print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {yourdmg} instead!")
+          eee -= yourdmg
+        else :
+          print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {yourdmg} damage!")
+          ene -= yourdmg
+        dmg = random.randint(10 + sssspecial, 40 + sssspecial)
+        print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+        if random.randint(1,10 - luck) == 1 :
+          print(f"They {epic[random.randint(0,len(epic) - 1)]} damaging them for {dmg} instead!")
+          ene -= dmg
+        else :
+          print(f"They {yap[random.randint(0,len(yap) - 1)]} your {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
+          eee -= dmg
+        print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+        wait()
+      if eee < 0.1 :
+        alive = False
       else :
-        print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {yourdmg} damage!")
-        ene -= yourdmg
-      dmg = random.randint(10 + sssspecial, 40 + sssspecial)
-      print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
-      if random.randint(1,10 - luck) == 1 :
-        print(f"They {epic[random.randint(0,len(epic) - 1)]} damaging them for {dmg} instead!")
-        ene -= dmg
-      else :
-        print(f"They {yap[random.randint(0,len(yap) - 1)]} your {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
-        eee -= dmg
-      print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
-      wait()
-    if eee < 0.1 :
-      alive = False
-    else :
-      print("YOU WON!")
-      print("You stole some cash off their corpse")
-      wait()
-      p += random.randint(2,36) + sssspecial
+        print("YOU WON!")
+        print("You stole some cash off their corpse")
+        wait()
+        p += random.randint(2,36) + sssspecial
   if action == "admin_abuse":
     print("By the way, there is a 1 in 50 chance to imediatly die due to admin abusing...")
     wait()
@@ -247,30 +250,33 @@ while alive:
     wait()
     while ene > 0 and eee > 0 :
       dmg = random.randint(10,40 - luck)
-      yourdmg = random.randint(10,40)
-      if random.randint(1,10 + luck) == 1 :
-        print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {yourdmg} instead!")
-        eee -= yourdmg
-      else :
-        print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {yourdmg} damage!")
-        ene -= yourdmg
-      dmg = random.randint(10 + sssspecial, 40 + sssspecial)
-      print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
-      if random.randint(1,10 - luck) == 1 :
-        print(f"They {epic[random.randint(0,len(epic) - 1)]} damaging them for {dmg} instead!")
-        ene -= dmg
-      else :
-        print(f"They {yap[random.randint(0,len(yap) - 1)]} your {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
-        eee -= dmg
-      print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
-      wait()
-    if eee < 0.1 :
-      alive = False
-    else :
-      print("YOU WON!")
-      print("You stole some cash off their corpse")
-      wait()
-      p += random.randint(2,36) + sssspecial
+      if yourdmg == 1:
+        yourdmg = random.randint(10,40)
+      else:
+       yourdmg == 999999999999999999999999999999999999999999999999999999999999
+        if random.randint(1,10) == 1 :
+          print(f"You {epic[random.randint(0,len(epic) - 1)]} damaging you for {yourdmg} instead!")
+          eee -= yourdmg
+        else :
+          print(f"You {yap[random.randint(0,len(yap) - 1)]} their {ppp[random.randint(0,len(ppp) - 1)]} for {yourdmg} damage!")
+          ene -= yourdmg
+        dmg = random.randint(10 + sssspecial, 40 + sssspecial)
+        print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+        if random.randint(1,10 - luck) == 1 :
+          print(f"They {epic[random.randint(0,len(epic) - 1)]} damaging them for {dmg} instead!")
+          ene -= dmg
+        else :
+          print(f"They {yap[random.randint(0,len(yap) - 1)]} your {ppp[random.randint(0,len(ppp) - 1)]} for {dmg} damage!")
+          eee -= dmg
+          print(f" Enemy HP: {ene} ===0=== Player HP: {eee}")
+          wait()
+        if eee < 0.1 :
+          alive = False
+        else :
+          print("YOU WON!")
+          print("You stole some cash off their corpse")
+          wait()
+          p += random.randint(2,36) + sssspecial
   if action == "work":
     print("To answer the questions, type the number next to the answer that you think is correct.")
     wait()
